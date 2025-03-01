@@ -1,6 +1,6 @@
 # Jogo Whac-A-Mole
 
-Este é um jogo simples de Whac-A-Mole desenvolvido em HTML, CSS e JavaScript, com um backend em Node.js e SQLite para salvar os recordes dos jogadores.
+Este é um jogo simples de Whac-A-Mole desenvolvido na aula de paginação web da PUC Rio em HTML, CSS e JavaScript, com um backend em Node.js e SQLite para salvar os recordes dos jogadores.
 
 ## Regras do Jogo
 
@@ -35,7 +35,7 @@ Este é um jogo simples de Whac-A-Mole desenvolvido em HTML, CSS e JavaScript, c
 1. Clone o repositório para o seu ambiente local:
     ```sh
     git clone https://github.com/jaugustoguerra/meu-site-puc.git
-    
+
     ```
 
 2. Instale as dependências do projeto:

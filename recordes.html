@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Recordes</title>
+</head>
+<body class="recordes">
+    <header>
+        <div class="previousPage">
+            <a href="tabuleiro.html" class="circulo">
+                <img src="imagens/arrow-up.png" alt="seta para cima" class="arrow">
+            </a>
+        </div>
+    </header>
+    <div class ="Rec">
+    <h1>Recordes</h1>
+    <table id="recordesTable">
+        <thead>
+            <tr>
+                <th>Nickname</th>
+                <th>Acertos</th>
+                <th>Data</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <!-- Os recordes serão inseridos aqui -->
+        </tbody>
+    </table>
+    </div>
+    <script>
+        fetch('http://localhost:3000/recordes')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('recordesTable').getElementsByTagName('tbody')[0];
+                data.forEach(recorde => {
+                    const row = tableBody.insertRow();
+                    row.insertCell(0).textContent = recorde.nickname;
+                    row.insertCell(1).textContent = recorde.acertos;
+                    row.insertCell(2).textContent = recorde.data;
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao carregar recordes:', error);
+            });
+    </script>
+</body>
+</html>

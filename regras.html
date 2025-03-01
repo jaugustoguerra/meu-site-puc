@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Regras do Jogo</title>
+</head>
+<body>
+    <header>
+        <div class="previousPage">
+            <a href="index.html" class="circulo">
+                <img src="imagens/arrow-up.png" alt="seta para cima" class="arrow">
+            </a>
+        </div>
+    </header>
+    <section class="regras">
+        <div class="contentBox">
+            <h2 class="heading">Regras do Jogo</h2>
+            <p id="welcomeMessage"></p>
+            <ul>
+                <li>O objetivo do jogo é acertar o maior número de toupeiras possível.</li>
+                <li>Cada acerto vale 10 pontos.</li>
+                <li>As toupeiras aparecem aleatoriamente nos buracos do tabuleiro.</li>
+                <li>O tempo de aparição das toupeiras diminui a cada acerto, tornando o jogo mais difícil.</li>
+                <li>Se você errar 3 vezes, o jogo termina e uma mensagem de "Game Over" é exibida.</li>
+                <li>Ao final do jogo, você pode salvar seu recorde inserindo seu nickname.</li>
+                <li>Os recordes são exibidos nesta página, ordenados pelo número de acertos.</li>
+            </ul>
+        </div>
+        <div class="imgBox">
+            <img src="imagens/Mole.png" alt="Imagem Whac-A-Mole" class="img">
+        </div>
+    </section>
+    <footer>
+        <div class="nextPage">
+            <a href="tabuleiro.html" class="circulo">
+                <img src="imagens/arrow-down.png" alt="seta para baixo" class="arrow">
+            </a>
+        </div>
+    </footer>
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const nickname = urlParams.get('nickname');
+
+        
+        if (nickname) {
+            document.getElementById('welcomeMessage').textContent = `Bem-vindo(a), ${nickname}!`;
+        }
+    </script>
+</body>
+</html>

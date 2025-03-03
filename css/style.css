@@ -6,6 +6,11 @@ body {
     box-sizing: border-box;
 }
 
+header, footer {
+    padding: 20px;
+    text-align: center;
+}
+
 section {
     padding: 20px;
     text-align: center;
@@ -40,7 +45,7 @@ section {
     position: fixed;
     bottom: 10px;
     left: 10px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     z-index: 3;
@@ -56,7 +61,7 @@ section {
     justify-content: center;
 }
 
-.nextPage .circulo {
+.previousPage .circulo, .nextPage .circulo {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -69,7 +74,7 @@ section {
     font-size: 1.5em;
 }
 
-.nextPage .circulo:hover {
+.previousPage .circulo:hover, .nextPage .circulo:hover {
     background-color: #0056b3;
 }
 
@@ -165,6 +170,8 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #41ec41;
+    text-align: center;
+    padding: 20px;
 }
 
 .gramado {
@@ -177,6 +184,15 @@ footer {
     flex-wrap: wrap;
     cursor: url(/imagens/hammer.png), crosshair;
     padding: 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
 }
 
 .gramado img {
@@ -191,6 +207,7 @@ footer {
     height: 536px;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .pontos th {
@@ -203,6 +220,21 @@ footer {
     text-align: right;
     font-size: 36px;
     font-family: 'Bungee Spice', sans-serif;
+}
+
+.pontos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pontos th, .pontos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.pontos th {
+    background-color: #f2f2f2;
 }
 
 #start {
@@ -260,6 +292,25 @@ th:nth-child(3), td:nth-child(3) {
     font-family: 'Bungee Spice', sans-serif;
 }
 
+.start-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.start-button-container .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.start-button-container .btn:hover {
+    background-color: #218838;
+}
+
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
     .form {
@@ -273,6 +324,15 @@ th:nth-child(3), td:nth-child(3) {
 
     .form input, .form button {
         font-size: 1em;
+    }
+
+    .hole {
+        width: 80px;
+        height: 80px;
+    }
+
+    .start-button-container .btn {
+        font-size: 0.9em;
     }
 }
 
@@ -288,6 +348,15 @@ th:nth-child(3), td:nth-child(3) {
 
     .form input, .form button {
         font-size: 0.9em;
+    }
+
+    .hole {
+        width: 60px;
+        height: 60px;
+    }
+
+    .start-button-container .btn {
+        font-size: 0.8em;
     }
 }
 

@@ -162,12 +162,13 @@ function salvarRecorde(nickname, acertos) {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Recorde salvo:', data);
+        console.log('%cRecorde salvo com sucesso!', 'color: green; font-weight: bold;');
+        console.log('%cDetalhes do recorde:', 'color: blue; font-weight: bold;', data);
         alert('Recorde salvo com sucesso!');
         window.location.href = 'recordes.html';
     })
     .catch(error => {
-        console.error('Erro ao salvar recorde:', error);
+        console.error('%cErro ao salvar recorde:', 'color: red; font-weight: bold;', error);
         alert('Erro ao salvar recorde. Por favor, tente novamente.');
     });
 }
